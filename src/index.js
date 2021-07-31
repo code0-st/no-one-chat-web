@@ -1,7 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import 'normalize.css';
+import './static/fonts/fonts.css'
+import 'antd/dist/antd.css';
+import './index.css'
+
 import {App} from './App';
 import {ThemeProvider} from "./store/themeContext";
 

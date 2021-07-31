@@ -1,0 +1,76 @@
+@mixin primary-text-dark {
+  font: {
+    family: "NotoSansJP";
+    size: 1rem;
+    weight: 400;
+  }
+  color: #f0fcf8;
+}
+
+@mixin secondary-text-dark {
+  font: {
+    family: "NotoSansJP";
+    size: 1rem;
+    weight: 500;
+  }
+  color: #7f808d;
+}
+
+@mixin primary-text-light {
+  font: {
+    family: "NotoSansJP";
+    size: 1rem;
+    weight: 400;
+  }
+  color: #2d3132;
+  transition: background-color .1s ease-in;
+}
+
+@mixin secondary-text-light {
+  font: {
+    family: "NotoSansJP";
+    size: 1rem;
+    weight: 500;
+  }
+  color: #444849;
+  transition: background-color .1s ease-in;
+}
+
+@mixin bg {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin primary-bg-dark {
+  @include bg;
+  background-color: #212a39;
+  transition: background-color .4s ease-out;
+  transition-delay: .2s;
+}
+
+@mixin secondary-bg-dark {
+  @include bg;
+  background-color: #32425a;
+  transition: background-color .4s ease-out;
+  transition-delay: .2s;
+}
+
+@mixin primary-bg-light {
+  @include bg;
+  background-color: #ffffff;
+  transition: background-color .4s ease-in;
+  transition-delay: .1s;
+}
+
+@mixin secondary-bg-light {
+  @include bg;
+  background-color: #ebeff7;
+  transition: background-color .4s ease-in;
+  transition-delay: .1s;
+}
+
+@mixin disabled {
+  opacity: 0.2;
+  pointer-events: none;
+  transition: all .1s ease-in-out;
+}

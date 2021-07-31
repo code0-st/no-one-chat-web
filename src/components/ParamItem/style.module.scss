@@ -1,0 +1,79 @@
+@import "../../mixins";
+
+.param {
+  position: relative;
+  padding: 8px 16px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background: #eaeaea;
+
+    animation-name: line-appearance;
+    animation-duration: .2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes line-appearance {
+  from {
+    left: 50%;
+    width: 0;
+  }
+  to {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.param_label {
+  margin-bottom: 8px;
+}
+.param_label__dark {
+  @include primary-text-dark
+}
+.param_label__light {
+  @include primary-text-light
+}
+.param_field {
+  flex-grow: 1;
+  width: 100%;
+}
+
+
+.selection {
+  cursor: pointer;
+  padding: 8px 10px;
+  margin: 8px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #3a3a3a;
+}
+
+.selection__dark {
+  @include primary-text-dark;
+}
+.selection__light {
+  @include primary-text-light;
+}
+
+.selection_active__dark {
+  @include primary-text-dark;
+  background-color: #4a3ec8;
+}
+.selection_active__light {
+  @include primary-text-dark;
+  background-color: #f1633f;
+}
+.selection__disabled {
+  @include disabled;
+}

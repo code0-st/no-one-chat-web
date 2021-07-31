@@ -1,0 +1,27 @@
+@import "../../../mixins";
+
+.params {
+  padding: 10px 16px;
+  width: 50% !important;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 10!important;
+}
+.params__dark {
+  @include primary-bg-dark
+}
+.params__light {
+  @include primary-bg-light
+}
+.params_column {
+  flex: 0 0 50%;
+  text-align: center;
+}
+
+.params_row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

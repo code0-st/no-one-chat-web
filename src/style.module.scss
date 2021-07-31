@@ -1,0 +1,59 @@
+@import "mixins";
+
+.root {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top_bar {
+  width: 100%;
+  height: 60px;
+  flex: 0 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__light {
+    background: #000;
+    @include secondary-bg-light;
+    @include primary-text-light;;
+  }
+
+  &__dark {
+    @include secondary-bg-dark;
+    @include primary-text-dark;
+  }
+}
+
+.content {
+  background-image: url("./static/img/bg.png");
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+    transition: all .2s ease-in;
+  }
+  &_dark {
+    &:after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 0;
+      transition: all .4s ease-in;
+    }
+  }
+}
