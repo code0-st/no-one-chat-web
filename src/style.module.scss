@@ -13,7 +13,7 @@
   flex: 0 0 60px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 
   &__light {
     background: #000;
@@ -27,6 +27,17 @@
   }
 }
 
+.theme_switch {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 120px;
+
+  & > *:last-child {
+    margin-left: 25%;
+  }
+}
+
 .content {
   background-image: url("./static/img/bg.png");
   flex-grow: 1;
@@ -35,6 +46,7 @@
   justify-content: center;
 
   position: relative;
+
   &:after {
     content: '';
     position: absolute;
@@ -45,6 +57,7 @@
     height: 0;
     transition: all .2s ease-in;
   }
+
   &_dark {
     &:after {
       top: 0;

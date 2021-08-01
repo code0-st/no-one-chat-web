@@ -1,0 +1,58 @@
+.anim {
+  cursor: pointer;
+  animation: none;
+
+  &:hover {
+    animation-name: hoverAnim;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes hoverAnim {
+  0% {
+    transform: rotate(0deg) scale(1.0);
+  }
+  25% {
+    transform: rotate(20deg) scale(0.7);
+  }
+  50% {
+    transform: rotate(0deg) scale(1.0);
+  }
+  75% {
+    transform: rotate(-20deg) scale(0.7);
+  }
+  100% {
+    transform: rotate(0deg) scale(1.0);
+  }
+}
+
+.fade {
+  opacity: 0;
+  transform: translate(-15px) scale(0);
+  transition: all .2s ease;
+}
+
+.fade_active {
+  transform: translate(0) scale(1);
+  opacity: 1;
+  transition: all .2s ease;
+  transition-delay: .1s;
+}
+
+.collapse {
+  position: absolute;
+  right: 0;
+  transform: translate(0, -15%);
+}
+
+.collapse__in {
+  top: 0;
+  transition: top .2s ease-in-out;
+  transition-delay: .2s;
+}
+
+.collapse__out {
+  top: -400%;
+  transition: top .2s ease-in-out;
+}
