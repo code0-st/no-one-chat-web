@@ -5,6 +5,8 @@ import {ParamItem} from "../../ParamItem/ParamItem";
 import {AGE_IDS, ageEnums, GENDER_IDS, genderEnums, topicEnums, TOPICS_IDS} from "./mock";
 import {SimpleParam} from "../../ParamItem/SimpleParam";
 import {MultipleParam} from "../../ParamItem/MultipleParam";
+import {Button} from "../../Button/Button";
+import {BorderAmin} from "../../AnimatedItem/BorderAnim";
 
 const s = require('./style.module.scss')
 
@@ -50,6 +52,14 @@ export const Params = ({}) => {
                                                          darkMode={darkMode}
                     />)}
                 </ParamItem>
+
+                <BorderAmin>
+                    <Button label={"Искать собеседника!"}
+                            onClick={() => null}
+                            size={'lg'}
+                    />
+                </BorderAmin>
+
             </div>
             <div className={s.params_column}>
                 <ParamItem label={"Пол собеседника:"} className={s.params_row}>

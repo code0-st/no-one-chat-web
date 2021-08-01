@@ -1,0 +1,33 @@
+@import "../../mixins";
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+}
+
+.button__dark {
+  .label {
+    @include primary-text-dark;
+  }
+}
+
+.button__light {
+  .label {
+    @include primary-text-light;
+  }
+}
+
+.button__xs {
+  padding: 4px 8px;
+}
+
+.button__md {
+  padding: 6px 10px;
+}
+
+.button__lg {
+  padding: 8px 12px;
+}

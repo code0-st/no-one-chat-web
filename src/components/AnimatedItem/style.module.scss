@@ -56,3 +56,117 @@
   top: -400%;
   transition: top .2s ease-in-out;
 }
+
+.border {
+  padding: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.2s;
+
+  span {
+    position: absolute;
+    display: block;
+
+    &:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+    }
+
+    &:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+    }
+
+    &:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+    }
+
+    &:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+    }
+  }
+
+  &:hover {
+    span {
+      transition: 1s;
+      &:nth-child(1) {
+        left: 100%;
+      }
+
+      &:nth-child(2) {
+        top: 100%;
+        transition-delay: 0.25s;
+      }
+
+      &:nth-child(3) {
+        right: 100%;
+        transition-delay: 0.5s;
+      }
+
+      &:nth-child(4) {
+        bottom: 100%;
+        transition-delay: 0.75s;
+      }
+    }
+  }
+}
+
+.border__dark {
+  span {
+    &:nth-child(1) {
+      background: linear-gradient(90deg, transparent, #4a3ec8);
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(180deg, transparent, #4a3ec8);
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(270deg, transparent, #4a3ec8);
+    }
+
+    &:nth-child(4) {
+      background: linear-gradient(360deg, transparent, #4a3ec8);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(74, 62, 200, 0.8), 0 0 40px rgba(74, 62, 200, 0.6), 0 0 80px rgba(74, 62, 200, 0.4);
+    transition-delay: 1s;
+  }
+}
+
+.border__light {
+  span {
+    &:nth-child(1) {
+      background: linear-gradient(90deg, transparent, #f1633f);
+    }
+
+    &:nth-child(2) {
+      background: linear-gradient(180deg, transparent, #f1633f);
+    }
+
+    &:nth-child(3) {
+      background: linear-gradient(270deg, transparent, #f1633f);
+    }
+
+    &:nth-child(4) {
+      background: linear-gradient(360deg, transparent, #f1633f);
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 0 0px rgba(241, 99, 63, 0.8), 0 0 20px rgba(241, 99, 63, 0.6), 0 0 40px rgba(241, 99, 63, 0.4);
+    transition-delay: 1s;
+  }
+}
