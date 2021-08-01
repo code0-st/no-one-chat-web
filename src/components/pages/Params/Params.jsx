@@ -7,6 +7,8 @@ import {SimpleParam} from "../../ParamItem/SimpleParam";
 import {MultipleParam} from "../../ParamItem/MultipleParam";
 import {Button} from "../../Button/Button";
 import {BorderAmin} from "../../AnimatedItem/BorderAnim";
+import {Link} from "react-router-dom";
+import {ROUTE_PATHS} from "../../../routers/paths";
 
 const s = require('./style.module.scss')
 
@@ -53,12 +55,14 @@ export const Params = ({}) => {
                     />)}
                 </ParamItem>
 
-                <BorderAmin>
-                    <Button label={"Искать собеседника!"}
-                            onClick={() => null}
-                            size={'lg'}
-                    />
-                </BorderAmin>
+                <Link to={ROUTE_PATHS.chat(1).path}>
+                    <BorderAmin>
+                        <Button label={"Искать собеседника!"}
+                                onClick={() => null}
+                                size={'lg'}
+                        />
+                    </BorderAmin>
+                </Link>
 
             </div>
             <div className={s.params_column}>

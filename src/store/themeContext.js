@@ -4,7 +4,7 @@ export const LIGHT_MODE_ON = "LIGHT_MODE_ON";
 export const DARK_MODE_ON = "DARK_MODE_ON";
 
 const initialState = {
-    darkMode: false,
+    darkMode: localStorage.getItem('darkMode') === 'true',
     palette: {
         dark: {
             primary: '#f0fcf8',
@@ -26,9 +26,11 @@ const initialState = {
 const themeReducer = (state, action) => {
     switch (action.type) {
         case LIGHT_MODE_ON: {
+            localStorage.setItem('darkMode', 'false')
             return {darkMode: false}
         }
         case DARK_MODE_ON: {
+            localStorage.setItem('darkMode', 'true')
             return {darkMode: true}
         }
         default:

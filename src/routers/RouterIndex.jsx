@@ -3,6 +3,7 @@ import {Loader} from "../components/Loader/Loader";
 import {BrowserRouter, Switch, Route, Redirect} from "react-router-dom";
 import {ROUTE_PATHS} from "./paths";
 import {Params} from "../components/pages/Params/Params";
+import {Dialog} from "../components/pages/Dialog/Dialog";
 
 export const RouterIndex = ({appLoading}) => {
     if (appLoading) {
@@ -20,8 +21,8 @@ export const RouterIndex = ({appLoading}) => {
                        component={Params}
                 />
                 <Route exact
-                       path={ROUTE_PATHS.chat().path}
-                       component={() => <div>Чат</div>}
+                       path={'/chat/:id'}
+                       component={Dialog}
                 />
             </Switch>
         </Suspense>

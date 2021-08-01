@@ -12,6 +12,7 @@ const s = require('./style.module.scss')
 export const App = () => {
     const theme = useContext(ThemeContext);
     const darkMode = theme.state.darkMode;
+
     return (
         <div className={s.root}>
             <nav className={clsx(s.top_bar, darkMode ? s.top_bar__dark : s.top_bar__light)}>
