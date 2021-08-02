@@ -1,15 +1,15 @@
 @mixin primary-text-dark {
   font: {
-    family: "NotoSansJP";
+    family: "NotoSerif";
     size: 1rem;
     weight: 400;
   }
-  color: #f0fcf8;
+  color: #dde8e4;
 }
 
 @mixin secondary-text-dark {
   font: {
-    family: "NotoSansJP";
+    family: "NotoSerif";
     size: 1rem;
     weight: 500;
   }
@@ -18,7 +18,7 @@
 
 @mixin primary-text-light {
   font: {
-    family: "NotoSansJP";
+    family: "NotoSerif";
     size: 1rem;
     weight: 400;
   }
@@ -28,7 +28,7 @@
 
 @mixin secondary-text-light {
   font: {
-    family: "NotoSansJP";
+    family: "NotoSerif";
     size: 1rem;
     weight: 500;
   }

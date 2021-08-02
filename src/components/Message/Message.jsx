@@ -16,7 +16,7 @@ export const Message = memo(({
     const classNames = clsx(
         s.message,
         darkMode ? s.message__dark : s.message__light,
-        isMy && s.message__my,
+        isMy ? s.message__my : s.message__conversationalist,
     )
 
     if (isMy) {

@@ -9,37 +9,34 @@
 
 .time {
   margin: 0px 12px;
-  font-size: 0.8rem!important;
+  font-size: 0.8rem !important;
 }
 
 .text {
   position: relative;
-  letter-spacing: .6px;
-  font-size: 0.9rem!important;
+  //letter-spacing: .4px;
+  font-size: 0.9rem !important;
 
   border: 1px solid #cfdfe9;
-  padding: 3px 10px;
+  padding: 6px 14px;
   border-radius: 7px;
   max-width: 70%;
   word-wrap: break-word;
+
   &:before {
     content: ' ';
     position: absolute;
     width: 0;
     height: 0;
-    top: 8px;
-    left: -11px;
-    right: auto;
-    bottom: auto;
-    border: 5px solid;
-    border-color: #cfdfe9 #cfdfe9 transparent transparent;
   }
 }
 
 .message__dark {
   .text {
     @include primary-text-dark;
+    background:  #212a39;
   }
+
   .avatar {
     @include primary-text-dark;
   }
@@ -53,9 +50,11 @@
   .text {
     @include primary-text-light;
   }
+
   .avatar {
     @include primary-text-light;
   }
+
   .time {
     @include secondary-text-light;
   }
@@ -63,6 +62,30 @@
 
 .message__my {
   justify-content: flex-end;
+  margin-right: 8px;
+  .text {
+  }
+  .text:before {
+    top: 6px;
+    right: -11px;
+    left: auto;
+    bottom: auto;
+    border: 5px solid;
+    border-color: #cfdfe9 transparent transparent #cfdfe9;
+  }
+}
+
+.message__conversationalist {
+  .text {
+  }
+  .text:before {
+    top: 6px;
+    left: -11px;
+    right: auto;
+    bottom: auto;
+    border: 5px solid;
+    border-color: #cfdfe9 #cfdfe9 transparent transparent;
+  }
 }
 
 .avatar {
@@ -74,4 +97,5 @@
   border: 1px solid #eaeaea;
   border-radius: 50%;
   margin-right: 12px;
+  margin-bottom: 8px;
 }

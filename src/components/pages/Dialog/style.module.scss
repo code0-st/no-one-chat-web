@@ -19,6 +19,11 @@
   position: relative;
   padding: 8px;
   flex-grow: 1;
+  max-height: calc(100vh - 220px);
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .message_box__dark {
@@ -29,9 +34,13 @@
 }
 
 .message_field {
+  box-sizing: border-box;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
   @include secondary-bg-light;
   width: 100%;
-  height: 120px;
+  flex: 0 0 140px;
   border: 1px solid #3a3a3a;
 }
 
@@ -78,6 +87,39 @@
   to {
     left: 0;
     width: 100%;
+  }
+}
+
+.input_area {
+  flex-grow: 1;
+  height: 90%;
+  position: relative;
+  margin-right: 18px!important;
+}
+.input {
+  padding: 3px 30px 3px 8px;
+  width: 100%;
+  height: 100%;
+  resize: none;
+  font-size: 0.9rem;
+}
+.input_area_emoji {
+  cursor: pointer;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+.send {
+  cursor: pointer;
+  svg {
+    width: 26px;
+    height: 26px;
   }
 }
 
